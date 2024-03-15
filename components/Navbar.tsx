@@ -11,12 +11,21 @@ const Navbar = () => {
                         Home
                     </Link>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center gap-20">
+                    <Link href="/UseStatePage" className="hover:scale-105">
+                        UseState
+                    </Link>
+                    <Link href="/UseEffectPage" className="hover:scale-105">
+                        UseEffect
+                    </Link>
+                    <Link href="/APICallsPage" className="hover:scale-105">
+                        API Calls
+                    </Link>
                     <ThemeSwitcher />
                 </div>
             </div>
         </nav>
-    );  
+    );
 };
 
 export default Navbar;

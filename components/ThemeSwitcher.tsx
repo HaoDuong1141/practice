@@ -5,11 +5,12 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export const ThemeSwitcher = () => {
     const { theme, setTheme } = useTheme();
+    const handleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
     return (
         <button
             className="w-12 hover:scale-110 active:scale-100 duration-200"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={handleTheme}
         >
             {theme === "light" ? (
                 <FontAwesomeIcon icon={faMoon} />
@@ -19,3 +20,5 @@ export const ThemeSwitcher = () => {
         </button>
     );
 };
+
+export default ThemeSwitcher;
